@@ -6,4 +6,10 @@
 //  Copyright © 2020 Kurniawan Gigih Lutfi Umam. All rights reserved.
 //
 
-import Foundation
+import Alamofire
+
+protocol HttpService {
+    var sessionManger: Session {get set}
+    func request(_ urlRequest: URLRequestConvertible)-> DataRequest
+}
+

@@ -6,4 +6,9 @@
 //  Copyright © 2020 Kurniawan Gigih Lutfi Umam. All rights reserved.
 //
 
-import Foundation
+enum ColorCodes {
+    case primary
+    case failure
+    case success
+    case bacgroundTextfield
+}

@@ -6,4 +6,15 @@
 //  Copyright © 2020 Kurniawan Gigih Lutfi Umam. All rights reserved.
 //
 
-import Foundation
+struct AuthModel: Codable {
+    let name: String
+    let email: String
+    let password: String
+    
+    
+    init(name: String = "", email: String = "", password: String = "") {
+        self.name = name
+        self.password = password
+        self.email = email
+    }
+}

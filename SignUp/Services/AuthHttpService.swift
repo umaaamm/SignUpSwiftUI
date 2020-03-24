@@ -6,4 +6,12 @@
 //  Copyright © 2020 Kurniawan Gigih Lutfi Umam. All rights reserved.
 //
 
-import Foundation
+import Alamofire
+
+final class AuthHttpService: HttpService {
+    var sessionManger: Session = Session.default
+    
+    func request(_ urlRequest: URLRequestConvertible) -> DataRequest {
+        return sessionManger.request(urlRequest).validate(statusCode: 200..<400)
+    }
+}
